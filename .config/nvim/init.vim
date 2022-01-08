@@ -102,8 +102,12 @@ map <silent> <leader><cr> :noh<cr>
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-"" Line Length Column
+" Line Length Column
 let &colorcolumn = join(range(81,999), ',')
+
+" Copy and Paste from clipboard
+vmap <leader>y "+y
+nmap <leader>p "+p
 
 "--------------------------------------------------------------------------
 " Plugins
